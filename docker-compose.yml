@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  cronos:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+
+    image: bot
+    container_name: container_bot
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
